@@ -11,9 +11,9 @@ class LearningController extends Controller
     public function index()
     {
         $learning = \App\Models\LearningObject::get();
-        return response()->json([
-              "learning" =>  $learning->toArray()
-          ],200
+        return response()->json(
+              $learning->toArray()
+          ,200
         );
     }
 }
